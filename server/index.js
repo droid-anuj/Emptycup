@@ -8,8 +8,6 @@ const ContactModel = require("./model/schema.js");
 const apiRoutes = require("./routes/api.js");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-const MONGO_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/?retryWrites=true&w=majority";
 
 app.use(express.json());
 app.use(cors(
@@ -21,13 +19,7 @@ app.use(cors(
 ));
 app.use("/api", apiRoutes);
 
-
-const MONGODB_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/?retryWrites=true&w=majority";
-mongoose
-	.connect(MONGODB_URI, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
+mongoose.connect('mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/?retryWrites=true&w=majority')
 	.then(() => {
 		console.log("Connected to MongoDB Atlas");
 	})
