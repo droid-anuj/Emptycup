@@ -16,6 +16,7 @@ function HomePage() {
   const [contactData, setContactData] = useState(null);
   const [isShortlistFilterActive, setIsShortlistFilterActive] = useState(false);
 
+<<<<<<< HEAD
   const fetchContactData = async () => {
     try {
       const response = await fetch(
@@ -27,6 +28,21 @@ function HomePage() {
     } catch (error) {
       console.log(error);
     }
+=======
+  const fetchContactData = () => {
+    axios
+
+      .get("https://emptycup-iota.vercel.app/api/contacts")
+
+      .then((response) => {
+        const data = response.data;
+        console.log(data);
+        setContactData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching contact data:", error);
+      });
+>>>>>>> 5de38d925025dc7073cb412ac6ce56c2023c2bf3
   };
 
   const handleShortlistToggle = (index) => {

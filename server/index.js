@@ -13,6 +13,7 @@ const MONGO_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongod
 
 app.use(express.json());
 app.use("/api", apiRoutes);
+<<<<<<< HEAD
 
 app.use(
 	cors({
@@ -20,6 +21,12 @@ app.use(
 	})
 );
 
+=======
+app.use(cors());
+
+
+
+>>>>>>> 5de38d925025dc7073cb412ac6ce56c2023c2bf3
 const MONGODB_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test?retryWrites=true&w=majority";
 mongoose
 	.connect(MONGODB_URI, {
