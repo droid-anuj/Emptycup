@@ -12,7 +12,7 @@
 		"dest": "/api/$1",
 		"methods": ["GET", "POST"],
 		"headers": {
-		  "Access-Control-Allow-Origin": ["http://localhost:3000", "https://emptycup-frontend-mocha.vercel.app"],
+		  "Access-Control-Allow-Origin": "https://emptycup-frontend-mocha.vercel.app",
 		  "Access-Control-Allow-Methods": "GET, POST"
 		}
 	  },
