@@ -17,7 +17,7 @@ function HomePage() {
 
   const fetchContactData = () => {
     axios
-      .get("http://localhost:5000/api/contacts")
+      .get("https://emptycup-backend.vercel.app/api/contacts")
       .then((response) => {
         const data = response.data;
         console.log(data);
