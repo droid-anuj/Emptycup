@@ -17,6 +17,7 @@ app.use("/api", apiRoutes);
 app.use(
 	cors({
 		origin: "https://empty-cup-client.vercel.app",
+		methods: ["GET","POST"],
 	})
 );
 
