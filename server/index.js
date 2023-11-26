@@ -14,7 +14,8 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json());
 app.use(cors(
 	{
-		origin:"emptycupserver.vercel.app",
+		origin: ["https://emptycup-ioqg.vercel.app"],
+		methods:["POST","GET"],
 	}
 )
 ));
