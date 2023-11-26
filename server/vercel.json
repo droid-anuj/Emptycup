@@ -1,25 +1,20 @@
 {
-	"version": 2,
-	"builds": [
-	  {
-		"src": "*.js",
-		"use": "@vercel/node"
-	  }
-	],
-	"routes": [
-	  {
-		"src": "/api/(.*)",
-		"dest": "/api/$1",
-		"methods": ["GET", "POST"],
-		"headers": {
-		  "Access-Control-Allow-Origin": "https://emptycup-frontend-mocha.vercel.app",
-		  "Access-Control-Allow-Methods": "GET, POST"
-		}
-	  },
-	  {
-		"src": "/(.*)",
-		"dest": "/"
-	  }
-	]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/",
+      "methods": ["GET", "POST"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://emptycup-frontend-mocha.vercel.app",
+        "Access-Control-Allow-Methods": "GET, POST"
+      }
+    }
+  ]
+}
