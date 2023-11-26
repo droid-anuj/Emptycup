@@ -24,7 +24,7 @@ const Contact = new Schema({
   price: {
      type: String, required: true 
     },
-  mobileNumbers: {
+  phoneNumbers: {
      type: [String], required: true 
     },
 });
