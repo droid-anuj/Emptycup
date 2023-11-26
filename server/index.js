@@ -12,8 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors(
 	{
-		origin: ["https://emptycup-ioqg.vercel.app"],
-		methods:["POST","GET"],
+		origin: "https://emptycup-ioqg.vercel.app",
 	}
 )
 ));
