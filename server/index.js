@@ -10,12 +10,7 @@ const apiRoutes = require("./routes/api.js");
 const app = express();
 
 app.use(express.json());
-app.use(cors(
-	{
-		origin: "https://emptycup-ioqg.vercel.app",
-	}
-)
-));
+
 app.use("/api", apiRoutes);
 
 app.use(cors(
@@ -26,7 +21,13 @@ app.use(cors(
 
 );
 
-mongoose.connect('mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test?retryWrites=true&w=majority')
+
+const MONGODB_URI = process.env.MONGODB_URI;
+mongoose
+	.connect(MONGODB_URI, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
 	.then(() => {
 		console.log("Connected to MongoDB Atlas");
 	})
