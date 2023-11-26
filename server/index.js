@@ -13,6 +13,7 @@ const MONGO_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongod
 
 app.use(express.json());
 app.use("/api", apiRoutes);
+app.use(cors());
 
 app.use(
 	cors({
