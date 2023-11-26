@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
-import axios from "axios";
 import logo from "../Assets/Logo.svg";
 import menu from "../Assets/Menu-icon.png";
 import contacts from "../Assets/contacts.png";
@@ -11,23 +10,23 @@ import sort from "../Assets/Sort.png";
 import ContactsCard from "./ContactsCard";
 import Shortlisted from "../Assets/shortlisted-1.png";
 
+
 function HomePage() {
+  
   const [contactData, setContactData] = useState(null);
   const [isShortlistFilterActive, setIsShortlistFilterActive] = useState(false);
 
-  const fetchContactData = () => {
-    axios
-
-      .get("https://emptycup-backend.vercel.app/api/contacts")
-
-      .then((response) => {
-        const data = response.data;
-        console.log(data);
-        setContactData(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching contact data:", error);
-      });
+  const fetchContactData = async () => {
+    try {
+      const response = await fetch(
+        `https://emptycup-iota.vercel.app/api/contacts`
+      );
+      const data = await response.json();
+      console.log(data);
+      setContactData(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleShortlistToggle = (index) => {
