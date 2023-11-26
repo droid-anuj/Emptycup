@@ -19,7 +19,7 @@ app.use(cors(
 ));
 app.use("/api", apiRoutes);
 
-mongoose.connect('mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test')
+mongoose.connect('mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test?retryWrites=true&w=majority')
 	.then(() => {
 		console.log("Connected to MongoDB Atlas");
 	})
