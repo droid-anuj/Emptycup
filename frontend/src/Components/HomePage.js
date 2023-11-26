@@ -18,7 +18,7 @@ function HomePage() {
   const fetchContactData = () => {
     axios
 
-      .get("https://emptycup-iota.vercel.app/api/Contacts")
+      .get("https://emptycup-iota.vercel.app/api/contacts")
 
       .then((response) => {
         const data = response.data;
