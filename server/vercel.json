@@ -1,15 +1,25 @@
 {
 	"version": 2,
 	"builds": [
-		{
-			"src": "*.js",
-			"use": "@vercel/node"
-		}
+	  {
+		"src": "*.js",
+		"use": "@vercel/node"
+	  }
 	],
 	"routes": [
-		{
-			"src": "/(.*)",
-			"dest": "/"
+	  {
+		"src": "/api/(.*)",
+		"dest": "/api/$1",
+		"methods": ["GET", "POST"],
+		"headers": {
+		  "Access-Control-Allow-Origin": ["http://localhost:3000", "https://emptycup-frontend-mocha.vercel.app"],
+		  "Access-Control-Allow-Methods": "GET, POST"
 		}
+	  },
+	  {
+		"src": "/(.*)",
+		"dest": "/"
+	  }
 	]
-}
+  }
+  

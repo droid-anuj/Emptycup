@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const express = require("express");
+const cors = require("cors");
 dotenv.config();
 
 const ContactModel = require("./model/schema.js");
@@ -13,19 +14,24 @@ const MONGO_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongod
 app.use(express.json());
 app.use("/api", apiRoutes);
 
+app.use(
+	cors({
+		origin: "https://emptycup-frontend-mocha.vercel.app",
+	})
+);
 const MONGODB_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test?retryWrites=true&w=majority";
 mongoose
-    .connect(MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
-    .then(() => {
-        console.log("Connected to MongoDB Atlas");
-    })
-    .catch((error) => {
-        console.error("Unable to connect to MongoDB Atlas, Error:", error);
-    });
+	.connect(MONGODB_URI, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
+	.then(() => {
+		console.log("Connected to MongoDB Atlas");
+	})
+	.catch((error) => {
+		console.error("Unable to connect to MongoDB Atlas, Error:", error);
+	});
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+	console.log(`Server is running on port ${PORT}`);
 });
