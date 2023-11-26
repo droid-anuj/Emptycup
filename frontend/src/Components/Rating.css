@@ -1,0 +1,18 @@
+.rating {
+    display: flex;
+  }
+  
+  .rating > * {
+    margin-right: 5px; 
+    font-size: 20px; 
+    color: #ccc;
+  }
+  
+  .rating > *:last-child {
+    margin-right: 0; 
+  }
+  
+  .rating > .filled {
+    color: #f8ce0b;
+  }
+  
