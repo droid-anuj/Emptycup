@@ -8,21 +8,19 @@ const ContactModel = require("./model/schema.js");
 const apiRoutes = require("./routes/api.js");
 
 const app = express();
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test?retryWrites=true&w=majority";
 
 app.use(express.json());
-
 app.use("/api", apiRoutes);
 
-app.use(cors(
-	{
-		origin:  "https://emptycup-frontend.vercel.app",
-	}
-)
-
+app.use(
+	cors({
+		origin: "https://empty-cup-client.vercel.app",
+	})
 );
 
-
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test?retryWrites=true&w=majority";
 mongoose
 	.connect(MONGODB_URI, {
 		useNewUrlParser: true,
