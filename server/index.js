@@ -15,12 +15,7 @@ app.use(express.json());
 app.use("/api", apiRoutes);
 app.use(cors());
 
-app.use(
-	cors({
-		origin: "https://emptycup-frontend-mocha.vercel.app",
-		methods: ["GET","POST"],
-	})
-);
+
 
 const MONGODB_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/test?retryWrites=true&w=majority";
 mongoose
