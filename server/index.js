@@ -15,11 +15,6 @@ app.use(express.json());
 app.use(cors());
 app.use("/api", apiRoutes);
 
-app.use(
-	cors({
-		origin: "https://empty-cup-client.vercel.app",
-	})
-);
 
 const MONGODB_URI = process.env.MONGODB_URI;
 mongoose

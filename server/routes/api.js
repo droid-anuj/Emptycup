@@ -3,7 +3,6 @@ const ContactModel = require("../model/schema.js");
 
 const router = Router();
 
-//GET request endpoint
 router.get("/contacts", async (req, res) => {
 	try {
 		const contacts = await ContactModel.find();
