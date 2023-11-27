@@ -71,7 +71,7 @@
 .Contacts {
     margin-left: 25px;
     margin-right: 27px;
-    color: #E0A64E; /* Updated color code */
+    color: #E0A64E; 
 }
 
 .gallery {
@@ -80,8 +80,7 @@
 
 .map {
     margin-right: 86px;
-    color: #D0D0D0; /* Updated color code */
-}
+    color: #D0D0D0;}
 
 .shortlisted{
     margin-right: 22px;
@@ -91,4 +90,25 @@
 }
 .shortlisted.active {
     color: #E0A64E;
+  }
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .spinner-container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f3f3f3; 
+    border-top: 10px solid #383636;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
   }

@@ -10,12 +10,9 @@ import sort from "../Assets/Sort.svg";
 import ContactsCard from "./ContactsCard";
 import Shortlisted from "../Assets/shortlisted.svg";
 
-
 function HomePage() {
-  
   const [contactData, setContactData] = useState(null);
   const [isShortlistFilterActive, setIsShortlistFilterActive] = useState(false);
-
 
   const fetchContactData = async () => {
     try {
@@ -27,7 +24,8 @@ function HomePage() {
       setContactData(data);
     } catch (error) {
       console.log(error);
-    }}
+    }
+  };
   const handleShortlistToggle = (index) => {
     setContactData((prevData) => {
       const newData = [...prevData];
@@ -44,7 +42,11 @@ function HomePage() {
   }, []);
 
   if (contactData === null) {
-    return <div>Loading...</div>;
+    return (
+      <div className="spinner-container">
+        <div className="loading-spinner"></div>
+      </div>
+    );
   }
 
   return (
