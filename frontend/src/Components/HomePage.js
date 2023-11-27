@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
 import logo from "../Assets/Logo.svg";
-import menu from "../Assets/Menu-icon.png";
-import contacts from "../Assets/contacts.png";
-import gallery from "../Assets/gallery.png";
-import map from "../Assets/Map.png";
+import menu from "../Assets/Menu-icon.svg";
+import contacts from "../Assets/contacts.svg";
+import gallery from "../Assets/gallery.svg";
+import map from "../Assets/Map.svg";
 import Notshortlisted from "../Assets/notshortlisted.svg";
-import sort from "../Assets/Sort.png";
+import sort from "../Assets/Sort.svg";
 import ContactsCard from "./ContactsCard";
 import Shortlisted from "../Assets/shortlisted.svg";
 

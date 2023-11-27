@@ -1,11 +1,11 @@
 // ContactsCard.js
-import React, { useState } from "react";
+import React from "react";
 import "./ContactsCard.css";
-import details from "../Assets/details.png";
-import hide from "../Assets/hide.png";
-import report from "../Assets/report.png";
-import shortlist from "../Assets/Shortlist.png";
-import notShortlist from "../Assets/notShortlist.png";
+import details from "../Assets/details.svg";
+import hide from "../Assets/hide.svg";
+import report from "../Assets/report.svg";
+import shortlist from "../Assets/shortlist.svg";
+import notShortlist from "../Assets/notShortlist.svg";
 import Rating from "./Rating";
 
 function ContactsCard({
