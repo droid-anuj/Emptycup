@@ -5,10 +5,10 @@ import menu from "../Assets/Menu-icon.png";
 import contacts from "../Assets/contacts.png";
 import gallery from "../Assets/gallery.png";
 import map from "../Assets/Map.png";
-import Notshortlisted from "../Assets/shortlisted.png";
+import Notshortlisted from "../Assets/notshortlisted.svg";
 import sort from "../Assets/Sort.png";
 import ContactsCard from "./ContactsCard";
-import Shortlisted from "../Assets/shortlisted-1.png";
+import Shortlisted from "../Assets/shortlisted.svg";
 
 
 function HomePage() {
