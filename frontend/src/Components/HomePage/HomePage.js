@@ -7,7 +7,7 @@ import gallery from "../Assets/gallery.svg";
 import map from "../Assets/Map.svg";
 import Notshortlisted from "../Assets/notshortlisted.svg";
 import sort from "../Assets/Sort.svg";
-import ContactsCard from "./ContactsCard";
+import ContactsCard from "../ContactCard/ContactsCard";
 import Shortlisted from "../Assets/shortlisted.svg";
 
 function HomePage() {

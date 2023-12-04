@@ -1,4 +1,3 @@
-// ContactsCard.js
 import React from "react";
 import "./ContactsCard.css";
 import details from "../Assets/details.svg";
@@ -6,7 +5,7 @@ import hide from "../Assets/hide.svg";
 import report from "../Assets/report.svg";
 import shortlist from "../Assets/shortlist.svg";
 import notShortlist from "../Assets/notShortlist.svg";
-import Rating from "./Rating";
+import Rating from "../Rating/Rating";
 
 function ContactsCard({
   data,
